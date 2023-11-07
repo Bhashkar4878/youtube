@@ -3,8 +3,26 @@ import YT_LG from "./downloadyout.png";
 import YUT_PG from "./yout logo.png";
 import chanel from "./Videopage.json";
 import Videopvcom from "./Videopvcom";
-import LikeDislikeButton from './LikeDislikeButton';
-function VideoPage() {
+import React, { useState } from 'react';
+import { useParams } from "react-router-dom";
+import videos from "./video.json";
+
+const VideoPage = () => {
+    const Params = useParams();
+    const id = Params.id;
+    function finderFunction(video){
+        return video.id == id;
+    }
+    const [likes, setLikes] = useState(0);
+    const [dislikes, setDislikes] = useState(0);
+    const video = videos.find(finderFunction)
+    const handleLike = () => {
+      setLikes(likes + 1);
+    };
+  
+    const handleDislike = () => {
+      setDislikes(dislikes + 1);
+    };
     return (
         <div>
             <div class="wrapper">
@@ -14,7 +32,7 @@ function VideoPage() {
                 </div>
                 <div id="item2">
                     <div id="si3">
-                    <input type="text" placeholder="Search" aria-label="Search" id="search"/>
+                        <input type="text" placeholder="Search" aria-label="Search" id="search" />
                     </div>
                     <div id="si4">
                         <button className="imgsrh">Search</button>
@@ -24,15 +42,16 @@ function VideoPage() {
                     <button id="myButton">Sign in </button>
                 </div>
             </div>
+
             <div class="body">
                 <div id="strg">
                     <div id="video"><iframe width="100%" height="100%"
-                        src="https://www.youtube.com/embed/VedXXaCLFhg?si=KwbAPvZorhnNvXp-?rel=1&mute=1&autoplay=1" title="YouTube video player"
+                        src={"https://www.youtube.com/embed/" + id + "?rel=1&mute=1&autoplay=1"} title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe></div>
                     <div id="rest">
-                        <div id="title"><b> Ram Siya Ram Siya Ram Jay Jay Ram | राम सिया राम सिया राम जय जय राम | 4K Sound </b> </div>
+                        <div id="title"><b> {video.title} </b> </div>
                         <div id="chanel">
                             <div id="cimg">
                                 <img src="https://yt3.ggpht.com/UzE1bgqrjeLCsaOIuPIEzB55GWz7d2koeM9xjWL7Sv-b0jJWkpr_nnJPPD65EhRakW0TxbXmYA=s88-c-k-c0x00ffffff-no-rj"
@@ -46,10 +65,13 @@ function VideoPage() {
                                 <button id="myButton2">Subscribe </button>
                             </div>
                             <div id="ot1">
-                            <LikeDislikeButton />
+                            <button onClick={handleLike} id="myButton3">Like</button>
+                                    <span>{likes}</span>
                             </div>
-                            <div id="ot2"><button id="myButton3">share </button></div>
-                            <div id="ot3"><button id="myButton4">... </button></div>
+                            <div id="ot2">
+                            <button onClick={handleDislike} id="myButton3">Dislike</button>
+                            <span>{dislikes}</span></div>
+                            <div id="ot3"><button id="myButton4">Share</button></div>
                         </div>
                         <div id="des">Ram Siya Ram Siya Ram Jay Jay Ram | राम सिया राम सिया राम जय जय राम | 4K Sound
 
@@ -107,8 +129,8 @@ function VideoPage() {
                         )
                     })}
                 </div>
-                </div>
-                </div>
-                );
+            </div>
+        </div>
+    );
 }
-                export default VideoPage;
+export default VideoPage;

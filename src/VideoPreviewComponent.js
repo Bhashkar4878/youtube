@@ -6,9 +6,10 @@ const cname = props.cname;
 const link = props.link;
 const Dura = props.Dura;
 const cimg = props.cimg;
+const id = props.id;
 return (
         <div className="video1">
-            <a href="/vedioPage">
+            <a href={"/vedioPage/"+id}>
              <div className="vimg">
                 <img className="vimg1" src={link}></img>
              </div>

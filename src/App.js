@@ -22,8 +22,8 @@ function App() {
           <Route path="/table" element={<TableComponent/>}/>
           <Route path="/Click" element={<HookComponent/>}/> */}
           <Route path='/' element={<HomeComponent></HomeComponent>}></Route>
-          <Route path='/video' element={<VideoComponent></VideoComponent>}></Route>
-          <Route path='/vedioPage' element={<VideoPage></VideoPage>}></Route>
+          <Route path='/video/:id' element={<VideoComponent></VideoComponent>}></Route>
+          <Route path='/vedioPage/:id' element={<VideoPage></VideoPage>}></Route>
 
         </Routes>
       </BrowserRouter>

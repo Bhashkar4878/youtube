@@ -6,6 +6,7 @@ import side from "./Side.png";
 import Videos from "./video.json";
 import channel from "./Videopage.json";
 
+
 function HomeComponent() {
     return (
         <div>
@@ -34,18 +35,24 @@ function HomeComponent() {
                     <img src={side} id="side"></img>
                 </div>
                 <div id="ved">
-                    {Videos.map(function(video){
+                    {Videos.map(function(video,index){
                         return(  <VideoPreviewComponent 
                             title={video.title}
                             cname={video.channelName}
                             // clink={channel.id}
                             link={video.thumbnail.url}
-                            Dura={channel.subscribers} 
-                            cimg={channel.thumbnail}>
+                            id={video.id}>
                             </VideoPreviewComponent>
 
                         )
                     })}
+                        {channel.map(function(chanel){
+                                return( <VideoPreviewComponent
+                                    Dura={chanel.subscribers} 
+                                    cimg={chanel.thumbnail}>
+                                    </VideoPreviewComponent>
+                                )}
+                            )}
                 
                 </div>
             </div>
