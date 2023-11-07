@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+// import TableComponent from './table.js';
+// import Timer from './Timer.js';
+// import HookComponent from './Click.js'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomeComponent from './HomeComponent';
+import VideoComponent from './VideoContent';
+import VideoPage from './VideoPage';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <TableComponent></TableComponent>
+      <Timer></Timer> */}
+      {/* <HookComponent></HookComponent> */}
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/Timer" element={<Timer/>}/>
+          <Route path="/table" element={<TableComponent/>}/>
+          <Route path="/Click" element={<HookComponent/>}/> */}
+          <Route path='/' element={<HomeComponent></HomeComponent>}></Route>
+          <Route path='/video' element={<VideoComponent></VideoComponent>}></Route>
+          <Route path='/vedioPage' element={<VideoPage></VideoPage>}></Route>
+
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

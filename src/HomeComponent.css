@@ -1,0 +1,174 @@
+.wrapper{
+    display: flex;
+    height: 50px;
+    width: 100vw;
+    direction: row;
+    /* align-items: start;
+    justify-content: center; */
+    border-bottom: 2px;
+    border-bottom: 3px solid black;
+}
+ #item1{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: row;
+    padding: 2px;
+ }
+ #si1{
+    flex: 1;
+    margin: 5px;
+    height: 40px;
+    width: 7%;
+
+
+ }
+ #si2{
+    flex: 2;
+
+    margin-right: 30px;
+    width: 15%;
+    margin: 5px;
+ }
+
+ #item2{
+   justify-content: center;
+    display: flex;
+    flex: 4;
+    padding: 2px;
+    flex-direction: row;
+ }
+ #si3{
+    margin-left: 30px;
+    margin: 5px;
+    height: 40px;
+    width: 40%;
+    border-radius: 40px;
+
+ }
+ #search{
+   height: 40px;
+   width: 100%;
+   border-radius: 40px;
+   margin-bottom: 50px;
+  }
+
+ #si4{
+   width: 50px;
+    margin: 5px;
+    height: 40px;
+    width: 7%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-right: 30px;
+    
+ }
+ #seric{
+   height: 100%;
+   width: 100%;
+   border-top-right-radius: 100%;
+   border-bottom-right-radius: 100%;
+  }
+
+ #item3{
+
+    display: flex;
+    border-radius: 30px;
+    width: 14%;
+    height: 40px;
+    margin-right: 80px;
+    margin-top: 5px;
+ }
+ #myButton{
+   width: 100%;
+   height: 100%;
+   border-radius: 30px;
+   font-size: 10px;
+   background-color: lightgrey;
+   
+
+ }
+ .body{
+   display: flex;
+   height: 50vw;
+   width: 100vw;
+   flex-direction: row;
+ }
+ #str{
+   display: flex;
+   flex: 3;
+   border-right: 3px solid black;
+ }
+ #side{
+   width: 100%;
+   height: 100%;
+ }
+ #ved{
+   display: flex;
+   flex: 20;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 10px;
+ }
+
+ .video1{
+   display: flex;
+   flex-direction: column;
+   border: 2px solid black;
+   height: calc(50% - 5px);
+   width: calc(31% - 5px);   margin: 5px;
+
+ }
+ .vimg{
+    display: flex;
+    flex: 9;
+    margin: 5px;
+ }
+ .vimg1{
+    height: 100%;
+    width: 100%;
+ }
+ .cpart{
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+ }
+ .cimg{
+    display: flex;
+    flex: 1;
+    margin-right: 1px;
+    border-radius: 20px;
+ }
+ .cimg1{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+ }
+
+ .cname{
+    display: flex;
+    flex: 5;
+    align-content: flex-start;
+ }
+ .cname1{
+    height: 100%;
+    width: 100%;
+    justify-items: flex-start;
+ }
+ .tpart{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px;
+ }
+ .ititle{
+    display: flex;
+    flex: 1;
+ }
+ .atitle{
+    display: flex;
+    flex: 1;
+
+ }
+
