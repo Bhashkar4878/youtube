@@ -6,7 +6,8 @@ import YUT_PG from "./yout logo.png";
 // import other from "./other.png";
 import side from "./Side.png";
 import Videos from "./video.json";
-import chanel from "./Videopage.json";
+import channel from "./Videopage.json";
+// import VideoPage from "./VideoPage";
 
 function HomeComponent() {
     return (
@@ -40,10 +41,11 @@ function HomeComponent() {
                         return(  <VideoPreviewComponent 
                             title={video.title}
                             cname={video.channelName}
-                            clink={chanel.id}
+                            // clink={channel.id}
                             link={video.thumbnail.url}
-                            Dura="195M views . 3min" 
-                            cimg={chanel.thumbnail}></VideoPreviewComponent>
+                            Dura={channel.subscribers} 
+                            cimg={channel.thumbnail}>
+                            </VideoPreviewComponent>
 
                         )
                     })}
