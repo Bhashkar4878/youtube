@@ -13,6 +13,9 @@ const VideoPage = () => {
     function finderFunction(video){
         return video.id == id;
     }
+    function finderFunction(chanel){
+        return chanel.id == id;
+    }
     const [likes, setLikes] = useState(0);
     const [dislikes, setDislikes] = useState(0);
     const video = videos.find(finderFunction)
@@ -56,7 +59,7 @@ const VideoPage = () => {
                         <div id="title"><b> {video.title} </b> </div>
                         <div id="chanel">
                             <div id="cimg">
-                                <img src="https://yt3.ggpht.com/UzE1bgqrjeLCsaOIuPIEzB55GWz7d2koeM9xjWL7Sv-b0jJWkpr_nnJPPD65EhRakW0TxbXmYA=s88-c-k-c0x00ffffff-no-rj"
+                                <img src={chanel.id}
                                     height="100%" width="100%" />
                             </div>
                             <div id="cnam">
