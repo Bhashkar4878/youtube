@@ -106,65 +106,6 @@ function VideoPage() {
 
                         )
                     })}
-                    {/* <div class="video11">
-                    <div id="videe">
-                        <img src="https://i.ytimg.com/vi/W1XYpEoUWdA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHb27_PzNsh1f0GPz6eoGkShuc7A"
-                            height="100%" width="100%" />
-                    </div>
-                    <div id="otht">
-                        <div id="tile"><b>Virat Kohli Heart Winning Gesture for Sachin Tendulkar after Winning</b></div>
-                        <div id="cn">The Cricketers' World</div>
-                        <div id="ct">115k views . 56sec</div>
-                    </div>
-                </div>
-                <div class="video11">
-                    <div id="videe">
-                        <img src="https://i.ytimg.com/vi/uX7FfXRlkMI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCt24f634CuY4taQjDUhmvEbCMqHw"
-                            height="100%" width="100%" />
-                    </div>
-                    <div id="otht">
-                        <div id="tile"><b>Ravindra Jadeja in Funny Mode | Post Match Press Conference | INDvSA 2023</b>
-                        </div>
-                        <div id="cn">Cricket Cloud</div>
-                        <div id="ct">2M views . 10min 34s</div>
-                    </div>
-                </div>
-                <div class="video11">
-                    <div id="videe">
-                        <img src="https://i.ytimg.com/vi/w2z0XvBTuNw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9pQaoJ7_pvV5IMrJZmiMNGXMlBg"
-                            height="100%" width="100%" />
-                    </div>
-                    <div id="otht">
-                        <div id="tile"><b>Watch: Rohit Sharma full interview after South Africa match.🎤🇮🇳</b></div>
-                        <div id="cn">Facts Nonhar</div>
-                        <div id="ct">56k views . 7min 34s</div>
-                    </div>
-                </div>
-                <div class="video11">
-                    <div id="videe">
-                        <img src="https://i.ytimg.com/vi/ZVIOuwMhDXA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdzn8jRbzTk8bbFu5ViI257cfbIQ"
-                            height="100%" width="100%" />
-                    </div>
-                    <div id="otht">
-                        <div id="tile"><b>Bhide ने लगाई गरम राख अपने सिर पे | Taarak Mehta Ka Ooltah Chashmah </b></div>
-                        <div id="cn">LIV Comedy</div>
-                        <div id="ct">25M views . 30min 56s</div>
-                    </div>
-                </div>
-                <div class="video11">
-                    <div id="videe">
-                        <img src="https://i.ytimg.com/vi/VedXXaCLFhg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBrbtRYNoKVaL3wGeULMfUpERfRMA"
-                            height="100%" width="100%" />
-                    </div>
-                    <div id="otht">
-                        <div id="tile"><b>Ram Siya Ram Siya Ram Jay Jay Ram | राम सिया राम सिया राम जय जय राम </b></div>
-                        <div id="cn">⚡Hindi Mashup ⚡</div>
-                        <div id="ct">1B views . 3min 25s</div>
-                    </div>
-                </div>
-
-            </div>
-                // </div>b */}
                 </div>
                 </div>
                 </div>
