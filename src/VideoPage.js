@@ -39,7 +39,9 @@ const VideoPage = () => {
                     </div>
                 </div>
                 <div id="item3">
-                    <button id="myButton">Sign in </button>
+                    <a href="/login"> 
+                     <button id="myButton">Sign in </button>
+                </a>
                 </div>
             </div>
 
@@ -58,8 +60,8 @@ const VideoPage = () => {
                                     height="100%" width="100%" />
                             </div>
                             <div id="cnam">
-                                <div id="cna">⚡Hindi Mashup ⚡</div>
-                                <div id="csu">16k subscribers</div>
+                                <div id="cna"><b>{video.channelName}</b></div>
+                                <div id="csu">{video.views}</div>
                             </div>
                             <div id="sub">
                                 <button id="myButton2">Subscribe </button>
@@ -73,47 +75,7 @@ const VideoPage = () => {
                             <span>{dislikes}</span></div>
                             <div id="ot3"><button id="myButton4">Share</button></div>
                         </div>
-                        <div id="des">Ram Siya Ram Siya Ram Jay Jay Ram | राम सिया राम सिया राम जय जय राम | 4K Sound
-
-                            Lyrics:
-
-                            राम सिया राम सिया राम
-                            जय जय राम,
-
-                            मंगल भवन अमंगल हारी
-                            द्रबहु सुदसरथ अचर बिहारी,
-                            राम सिया राम सिया राम....
-
-                            दीन दयाल बिरिदु संभारी
-                            हरो नाथ मम संकट भारी,
-                            राम सिया राम सिया राम.....
-
-                            होइहै वही जो राम रचि राखा,
-                            को करे तरफ़ बढ़ाए साखा,
-                            राम सिया राम सिया राम.....
-
-                            जाकी रही भावना जैसी,
-                            प्रभु मूरति देखी तिन तैसी
-                            राम सिया राम सिया राम....
-
-                            जा पर किरपा राम की होई,
-                            ता पर किरपा सबकी होई,
-                            राम सिया राम सिया राम
-
-                            All Rights to Music Label Co. & No Copyright Infringement Intended.
-
-                            Uploaded for Promotional and preview Purposes only If any artist or label has copyright issues
-                            with my videos, please contact me
-                            Sandeekumar291099@gmail.com
-
-                            ---------------------------------------------------------------------
-                            DISCLAIMER: This Following Audio/Video is Strictly meant for Promotional purpose. We Do not Wish
-                            to make any Commercial Use of this & Intended to Showcase the Creativity Of the Artist Involved.
-
-                            The Original Copyright (s) is (are) Solely owned by the Companies/Original-
-                            Artist(s)/Record-label(s).All the contents are intended to Showcase the Creativity of the artist
-                            involved and are strictly done for Promotional purpose.
-
+                        <div id="des">{video.description}
                         </div>
                     </div>
                 </div>

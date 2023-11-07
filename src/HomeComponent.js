@@ -5,6 +5,7 @@ import YUT_PG from "./yout logo.png";
 import side from "./Side.png";
 import Videos from "./video.json";
 import channel from "./Videopage.json";
+// import loginComponent from "./loginComponent";
 
 
 function HomeComponent() {
@@ -27,8 +28,11 @@ function HomeComponent() {
                     </div>
                     <div id="si4"> <button className="imgsrh">Search</button></div>
                 </div>
-                <div id="item3"><button id="myButton"><b>Sign in</b></button>
-                </div>
+                
+                    <div id="item3">
+                    <a href="/login"><button id="myButton"><b>Sign in</b></button>   </a>
+              </div>
+             
             </div>
             <div class="body">
                 <div id="str">
