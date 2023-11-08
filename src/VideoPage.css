@@ -154,7 +154,15 @@
     margin-right: 10px;
 
  }
- #myButton2{
+ .subchannelButton{
+   background-color: black;
+   width: 100%;
+   color: white;
+   height: 40px;
+   border-radius: 10px;
+ }
+
+ .channelbutton{
    background-color: red;
    width: 100%;
    height: 40px;
@@ -169,7 +177,6 @@
  #ot2{
     flex: 3;
     width: 7%;
-    /* margin-left: 40px; */
     margin-top: 30px;
 
  }
@@ -199,7 +206,6 @@
    display: flex;
    flex: 3;
    flex-direction: column;
-   /* flex-wrap: wrap; */
  }
 
  .video11{

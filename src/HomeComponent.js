@@ -45,53 +45,22 @@ function HomeComponent() {
             </div>
             <div class="body">
                 <div id="str">
-                    <div id="str12">
-                        <div id="str121">
-                            <button id="myButton12">Home</button>
-                        </div>
-                        <div id="str122">
-                            <button id="myButton12">Shorts</button>
-                        </div>
-                        <div id="str123">
-                            <button id="myButton12">Subscriptions</button>
-                        </div>
-                    </div>
-                    <div id="str13">
-                    <div id="str131">
-                            <button id="myButton12">You</button>
-                        </div>
-                        <div id="str132">
-                            <button id="myButton12">History</button>
-                        </div>
-                    </div>
-                    <div id="str14">
-                        {/* <div id="str141"> */}
-                        <b>Sign in to procede</b>
-                        {/* </div> */}
-                        <div id="str142">
-                        <a href="/login"><button id="myButton12"><b>Sign in</b></button></a>
-                        </div>
-                    </div>
-                    <div id="str15">
-                        <b>Explore</b>
-                        <div id="str121">
-                            <button id="myButton12">Home</button>
-                        </div>
-                        <div id="str122">
-                            <button id="myButton12">Shorts</button>
-                        </div>
-                        <div id="str123">
-                            <button id="myButton12">Subscriptions</button>
-                        </div>
-                        <div id="str121">
-                            <button id="myButton12">Home</button>
-                        </div>
-                        <div id="str122">
-                            <button id="myButton12">Shorts</button>
-                        </div>
-                        <div id="str123">
-                            <button id="myButton12">Subscriptions</button>
-                        </div>
+                <div className="sidebar"> 
+          <div className="sidefeature">
+            <div className="sideline"><i className="fa-solid fa-bars"></i><br/></div>
+            <div className="sidehome"> <a href="newyoutube.html">    <i className="fa-solid fa-house"></i>
+                  <br/>Home</a></div>
+            <div className="sidetrend">
+                <a href="trending.html">
+                    <i className="fa-solid fa-fire"></i> <br/> Trending </a>
+            </div>
+            <div className="sidesub"> 
+                <a href="subscription.html"><i className="fa-solid fa-clapperboard"></i>Subscription</a>
+            </div>
+            <div className="sidelib"> 
+                <a href="library.html"><i className="fa-solid fa-folder"></i><br/> Library</a>
+            </div>
+          </div>
 
                     </div>
                     {/* <img src={side} id="side"></img> */}

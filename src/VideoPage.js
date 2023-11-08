@@ -14,13 +14,12 @@ const VideoPage = () => {
         return video.id == id;
     }
 
-    const [likes, setLikes] = useState(0);
-    const [dislikes, setDislikes] = useState(0);
+    const [likes, setLikes] = useState(100);
+    const [dislikes, setDislikes] = useState(30);
     const video = videos.find(finderFunction)
-    const handleLike = () => {
-      localStorage.setItem(id + "_liked",true);
-    };
-  const isLiked = localStorage.getItem(id + '_liked');
+    const handleLikes = () => {
+        setLikes(likes + 1);
+      };
     const handleDislike = () => {
       setDislikes(dislikes + 1);
     };
@@ -29,7 +28,18 @@ const VideoPage = () => {
         localStorage.setItem("LoggedIn",false);
         window.location.href = "/";
     }
-
+    function onSubscribe(){
+        if (subscribe == "true"){
+            localStorage.setItem(id + "_Subscribed",false)
+            setSubscribed("false");
+        }
+        else{
+            localStorage.setItem(id + "_Unsubscribed",true)
+            setSubscribed("true");
+        }
+    }
+    
+    const [subscribe, setSubscribed] = useState(localStorage.getItem(id + "subscribe"));
     return (
         <div>
             <div class="wrapper">
@@ -74,10 +84,12 @@ const VideoPage = () => {
                                 <div id="csu">{video.views}</div>
                             </div>
                             <div id="sub">
-                                <button id="myButton2">Subscribe </button>
+                                <button className={
+                                    subscribe == "true" ? "subchannelButton" : "channelbutton"
+                                }onClick={onSubscribe}>Subscribe </button>
                             </div>
                             <div id="ot1">
-                            <button onClick={handleLike} id="myButton3">Like</button>
+                            <button onClick={handleLikes} id="myButton3">Like</button>
                                     <span>{likes}</span>
                             </div>
                             <div id="ot2">
