@@ -13,19 +13,23 @@ const VideoPage = () => {
     function finderFunction(video){
         return video.id == id;
     }
-    function finderFunction(chanel){
-        return chanel.id == id;
-    }
+
     const [likes, setLikes] = useState(0);
     const [dislikes, setDislikes] = useState(0);
     const video = videos.find(finderFunction)
     const handleLike = () => {
-      setLikes(likes + 1);
+      localStorage.setItem(id + "_liked",true);
     };
-  
+  const isLiked = localStorage.getItem(id + '_liked');
     const handleDislike = () => {
       setDislikes(dislikes + 1);
     };
+    const isloggedId = localStorage.getItem("LoggedIn")
+    function onLogout(){
+        localStorage.setItem("LoggedIn",false);
+        window.location.href = "/";
+    }
+
     return (
         <div>
             <div class="wrapper">
@@ -42,10 +46,13 @@ const VideoPage = () => {
                     </div>
                 </div>
                 <div id="item3">
-                    <a href="/login"> 
-                     <button id="myButton">Sign in </button>
-                </a>
-                </div>
+                {isloggedId == "true" ? (<div><button onClick={onLogout} id="myButton">Logout </button></div>) : (<div>
+                        <a href="/login">
+                         <button id="myButton">Sign in </button>
+                         </a>
+                         </div>)}
+                </div>         
+                
             </div>
 
             <div class="body">
@@ -59,7 +66,7 @@ const VideoPage = () => {
                         <div id="title"><b> {video.title} </b> </div>
                         <div id="chanel">
                             <div id="cimg">
-                                <img src={chanel.id}
+                                <img src={video.chanel.thumbnail}
                                     height="100%" width="100%" />
                             </div>
                             <div id="cnam">
@@ -83,12 +90,12 @@ const VideoPage = () => {
                     </div>
                 </div>
                 <div id="vede">
-                    {chanel.map(function (chanel) {
+                    {videos.map(function (videoItem) {
                         return (<Videopvcom
-                            title={chanel.name}
-                            cname={chanel.id}
-                            // clink="https://www.youtube.com/channel/UCmkWj7Sft1lt1VHX43BbAfA"
-                            link={chanel.thumbnail}
+                            title={videoItem.title}
+                            cname={videoItem.channelName}
+
+                            link={videoItem.thumbnail.url}
                             Dura={chanel.subscribers}></Videopvcom>
 
                         )

@@ -2,13 +2,18 @@ import "./HomeComponent.css";
 import VideoPreviewComponent from "./VideoPreviewComponent";
 import YT_LG from "./downloadyout.png";
 import YUT_PG from "./yout logo.png";
-import side from "./Side.png";
+
 import Videos from "./video.json";
-import channel from "./Videopage.json";
-// import loginComponent from "./loginComponent";
+
+
 
 
 function HomeComponent() {
+    const isloggedId = localStorage.getItem("LoggedIn")
+    function onLogout(){
+        localStorage.setItem("LoggedIn",false);
+        window.location.href = "/";
+    }
     return (
         <div>
             <div class="wrapper">
@@ -30,13 +35,66 @@ function HomeComponent() {
                 </div>
                 
                     <div id="item3">
-                    <a href="/login"><button id="myButton"><b>Sign in</b></button>   </a>
+                    {isloggedId == "true" ? (<div><button onClick={onLogout} id="myButton">Logout </button></div>) : (<div>
+                        <a href="/login">
+                         <button id="myButton">Sign in </button>
+                         </a>
+                         </div>)}
               </div>
              
             </div>
             <div class="body">
                 <div id="str">
-                    <img src={side} id="side"></img>
+                    <div id="str12">
+                        <div id="str121">
+                            <button id="myButton12">Home</button>
+                        </div>
+                        <div id="str122">
+                            <button id="myButton12">Shorts</button>
+                        </div>
+                        <div id="str123">
+                            <button id="myButton12">Subscriptions</button>
+                        </div>
+                    </div>
+                    <div id="str13">
+                    <div id="str131">
+                            <button id="myButton12">You</button>
+                        </div>
+                        <div id="str132">
+                            <button id="myButton12">History</button>
+                        </div>
+                    </div>
+                    <div id="str14">
+                        {/* <div id="str141"> */}
+                        <b>Sign in to procede</b>
+                        {/* </div> */}
+                        <div id="str142">
+                        <a href="/login"><button id="myButton12"><b>Sign in</b></button></a>
+                        </div>
+                    </div>
+                    <div id="str15">
+                        <b>Explore</b>
+                        <div id="str121">
+                            <button id="myButton12">Home</button>
+                        </div>
+                        <div id="str122">
+                            <button id="myButton12">Shorts</button>
+                        </div>
+                        <div id="str123">
+                            <button id="myButton12">Subscriptions</button>
+                        </div>
+                        <div id="str121">
+                            <button id="myButton12">Home</button>
+                        </div>
+                        <div id="str122">
+                            <button id="myButton12">Shorts</button>
+                        </div>
+                        <div id="str123">
+                            <button id="myButton12">Subscriptions</button>
+                        </div>
+
+                    </div>
+                    {/* <img src={side} id="side"></img> */}
                 </div>
                 <div id="ved">
                     {Videos.map(function(video,index){
@@ -45,19 +103,14 @@ function HomeComponent() {
                             cname={video.channelName}
                             // clink={channel.id}
                             link={video.thumbnail.url}
+                            Dura={video.chanel.subscribers} 
+                            cimg={video.chanel.thumbnail}
                             id={video.id}>
                             </VideoPreviewComponent>
 
                         )
                     })}
-                        {channel.map(function(chanel){
-                                return( <VideoPreviewComponent
-                                    Dura={chanel.subscribers} 
-                                    cimg={chanel.thumbnail}>
-                                    </VideoPreviewComponent>
-                                )}
-                            )}
-                
+
                 </div>
             </div>
         </div>
