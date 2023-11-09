@@ -14,12 +14,19 @@ const VideoPage = () => {
         return video.id == id;
     }
 
-    const [likes, setLikes] = useState(100);
+    const [likes, setLikes] = useState(localStorage.getItem(id +"likes"));
     const [dislikes, setDislikes] = useState(30);
     const video = videos.find(finderFunction)
-    const handleLikes = () => {
-        setLikes(likes + 1);
-      };
+    function onlike(){
+        if (likes == "true"){
+            localStorage.setItem(id + "_liked",false)
+            setLikes("false");
+        }
+        else{
+            localStorage.setItem(id + "_Unliked",true)
+            setLikes("true");
+        }
+    }
     const handleDislike = () => {
       setDislikes(dislikes + 1);
     };
@@ -89,8 +96,9 @@ const VideoPage = () => {
                                 }onClick={onSubscribe}>Subscribe </button>
                             </div>
                             <div id="ot1">
-                            <button onClick={handleLikes} id="myButton3">Like</button>
-                                    <span>{likes}</span>
+                            <button className={ 
+                                    likes == "true" ? "likesButton" : "likedbutton"
+                                }onClick={onlike}>Like</button>
                             </div>
                             <div id="ot2">
                             <button onClick={handleDislike} id="myButton3">Dislike</button>
