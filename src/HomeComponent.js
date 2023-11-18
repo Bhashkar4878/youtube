@@ -63,14 +63,14 @@ function HomeComponent() {
           </div>
 
                     </div>
-                    {/* <img src={side} id="side"></img> */}
+
                 </div>
                 <div id="ved">
                     {Videos.map(function(video,index){
                         return(  <VideoPreviewComponent 
                             title={video.title}
                             cname={video.channelName}
-                            // clink={channel.id}
+
                             link={video.thumbnail.url}
                             Dura={video.chanel.subscribers} 
                             cimg={video.chanel.thumbnail}
